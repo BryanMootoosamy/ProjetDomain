@@ -13,24 +13,33 @@ header {
     color: #E8E3D3;
     text-align: center;
     width: 100%; }
+    @media screen and (max-width: 768px) and (orientation: landscape) {
+      header .top {
+        height: 20vh; } }
     header .top h1 {
       font-family: "Roboto Mono";
       font-size: 4vh;
       margin: auto;
       padding-top: 2vh; }
+      @media screen and (max-width: 768px) and (orientation: landscape) {
+        header .top h1 {
+          font-size: 10vh; } }
     header .top h3 {
       font-family: "Roboto Mono";
       font-size: 1.5vh;
       margin: auto;
       font-style: italic;
       padding-top: 1vh; }
+      @media screen and (max-width: 768px) and (orientation: landscape) {
+        header .top h3 {
+          font-size: 4vh; } }
   header .bottom {
     height: 3vh;
     width: 100%;
     background-color: #333331;
     padding-top: 2vh;
     transform: translateY(-1vh); }
-    @media screen and (max-width: 760px) and (orientation: portrait) {
+    @media screen and (max-width: 768px) and (orientation: portrait) {
       header .bottom {
         background: none;
         float: left;
@@ -39,9 +48,12 @@ header {
         background-color: rgba(30, 30, 31, 0.85);
         position: fixed;
         transform: translateX(-100%); } }
+    @media screen and (max-width: 768px) and (orientation: landscape) {
+      header .bottom {
+        height: 8vh; } }
     header .bottom .burger {
       display: none; }
-      @media screen and (max-width: 760px) and (orientation: portrait) {
+      @media screen and (max-width: 768px) and (orientation: portrait) {
         header .bottom .burger {
           display: block;
           background: none;
@@ -50,28 +62,33 @@ header {
           float: right;
           font-size: 3.5vh;
           transform: translateX(11vw); } }
-  header .show {
-    transform: translateX(0%);
-    transition: ease-out; }
-    header .show ul {
+    header .bottom ul {
       display: flex;
       width: 60%;
       justify-content: space-between;
       margin-left: 20vw; }
-      @media screen and (max-width: 760px) and (orientation: portrait) {
-        header .show ul {
+      @media screen and (max-width: 768px) and (orientation: portrait) {
+        header .bottom ul {
           display: block;
           width: 60%;
           margin: 10vh 0 0 0; } }
-      header .show ul li {
+      @media screen and (max-width: 768px) and (orientation: landscape) {
+        header .bottom ul {
+          transform: translateY(1vh);
+          justify-content: space-between; } }
+      @media screen and (max-width: 480px) and (orientation: landscape) {
+        header .bottom ul {
+          width: 80%;
+          transform: translateX(-10vw); } }
+      header .bottom ul li {
         padding-left: 2vw;
         transform: translateY(-0.5vh); }
-        @media screen and (max-width: 760px) and (orientation: portrait) {
-          header .show ul li {
+        @media screen and (max-width: 768px) and (orientation: portrait) {
+          header .bottom ul li {
             margin-top: 10vh;
             line-height: 4vh;
             margin-left: 3.5vw; } }
-        header .show ul li a {
+        header .bottom ul li a {
           text-decoration: none;
           font-family: "Roboto Mono";
           color: #E8E3D3;
@@ -79,16 +96,23 @@ header {
           background-color: #6B696B;
           padding: 0.5vh;
           border-radius: 0.5vh; }
-          @media screen and (max-width: 760px) and (orientation: portrait) {
-            header .show ul li a {
+          @media screen and (max-width: 768px) and (orientation: landscape) {
+            header .bottom ul li a {
+              padding: 1vh;
+              font-size: 4vh; } }
+          @media screen and (max-width: 768px) and (orientation: portrait) {
+            header .bottom ul li a {
               background: none;
               font-size: 3.5vh;
               font-weight: bold; } }
-          header .show ul li a:hover {
+          header .bottom ul li a:hover {
             background-color: #ADABAD; }
-            @media screen and (max-width: 760px) and (orientation: portrait) {
-              header .show ul li a:hover {
+            @media screen and (max-width: 768px) and (orientation: portrait) {
+              header .bottom ul li a:hover {
                 background: none; } }
+  header .show {
+    transform: translateX(0%);
+    transition: ease-out; }
 
 .main {
   margin-top: 15vh;
@@ -107,9 +131,13 @@ main {
     margin: 5vh auto auto 44vw;
     height: 20vh;
     border-radius: 15vh; }
-    @media screen and (max-width: 760px) and (orientation: portrait) {
+    @media screen and (max-width: 768px) and (orientation: portrait) {
       main img {
         transform: translateX(-35%); } }
+    @media screen and (max-width: 768px) and (orientation: landscape) {
+      main img {
+        height: 35vh;
+        transform: translateX(-3vw); } }
   main h2 {
     margin: auto;
     font-family: "Roboto Mono";
@@ -119,7 +147,7 @@ main {
     text-decoration: underline; }
   main .content {
     display: flex; }
-    @media screen and (max-width: 760px) and (orientation: portrait) {
+    @media screen and (max-width: 768px) and (orientation: portrait) {
       main .content {
         display: block; } }
     main .content .left {
@@ -128,43 +156,56 @@ main {
       margin-top: 5vh;
       width: 30vw;
       font-family: "Roboto Mono"; }
-      @media screen and (max-width: 760px) and (orientation: portrait) {
+      @media screen and (max-width: 768px) and (orientation: portrait) {
         main .content .left {
           width: 80vw; } }
       main .content .left h3 {
         font-size: 4vh;
         font-weight: bold; }
+        @media screen and (max-width: 768px) and (orientation: landscape) {
+          main .content .left h3 {
+            font-size: 8vh; } }
       main .content .left p {
         font-size: 1.5vh;
         font-style: italic;
         margin-top: 1.5vh;
         line-height: 3vh; }
-        @media screen and (max-width: 760px) and (orientation: portrait) {
+        @media screen and (max-width: 768px) and (orientation: portrait) {
           main .content .left p {
             font-size: 2vh;
             line-height: 4vh;
             text-align: justify; } }
+        @media screen and (max-width: 768px) and (orientation: landscape) {
+          main .content .left p {
+            font-size: 3vh; } }
     main .content .right {
       margin: auto;
       padding: 2vh 2vw;
       margin-top: 5vh;
       width: 30vw;
       font-family: "Roboto Mono"; }
-      @media screen and (max-width: 760px) and (orientation: portrait) {
+      @media screen and (max-width: 768px) and (orientation: portrait) {
         main .content .right {
           width: 80vw; } }
       main .content .right h3 {
         font-size: 4vh;
         font-weight: bold; }
+        @media screen and (max-width: 768px) and (orientation: landscape) {
+          main .content .right h3 {
+            font-size: 8vh; } }
       main .content .right ul li {
         font-size: 1.5vh;
         font-style: italic;
         margin-top: 1.5vh;
         line-height: 3vh; }
-        @media screen and (max-width: 760px) and (orientation: portrait) {
+        @media screen and (max-width: 768px) and (orientation: portrait) {
           main .content .right ul li {
             font-size: 2vh;
             line-height: 5vh; } }
+        @media screen and (max-width: 768px) and (orientation: landscape) {
+          main .content .right ul li {
+            font-size: 3vh;
+            line-height: 6vh; } }
         main .content .right ul li a {
           font-style: normal;
           border: 1px solid #1E1E1F;
@@ -173,7 +214,7 @@ main {
           text-decoration: none;
           color: #E8E3D3;
           border-radius: 1vh; }
-          @media screen and (max-width: 760px) and (orientation: portrait) {
+          @media screen and (max-width: 768px) {
             main .content .right ul li a {
               background: none;
               border: none;
@@ -182,7 +223,7 @@ main {
           main .content .right ul li a:hover {
             background-color: #E8E3D3;
             color: #1E1E1F; }
-            @media screen and (max-width: 760px) and (orientation: portrait) {
+            @media screen and (max-width: 768px) and (orientation: portrait) {
               main .content .right ul li a:hover {
                 background: none;
                 color: #333331; } }
@@ -191,13 +232,13 @@ main {
   display: flex;
   width: 100vw;
   font-family: "Roboto Mono"; }
-  @media screen and (max-width: 760px) and (orientation: portrait) {
+  @media screen and (max-width: 768px) and (orientation: portrait) {
     .form {
       display: block; } }
   .form .log {
     margin: 8vh auto auto 20vw;
     width: 30%; }
-    @media screen and (max-width: 760px) and (orientation: portrait) {
+    @media screen and (max-width: 768px) and (orientation: portrait) {
       .form .log {
         width: 70%; } }
     .form .log h3 {
@@ -213,7 +254,7 @@ main {
   .form .sign {
     margin: 8vh auto auto 14vw;
     width: 40%; }
-    @media screen and (max-width: 760px) and (orientation: portrait) {
+    @media screen and (max-width: 768px) and (orientation: portrait) {
       .form .sign {
         width: 70%;
         margin-bottom: 2vh; } }
@@ -222,11 +263,14 @@ main {
       font-weight: bold;
       text-decoration: underline;
       margin-bottom: 20vh; }
-      @media screen and (max-width: 760px) and (orientation: portrait) {
+      @media screen and (max-width: 768px) and (orientation: portrait) {
         .form .sign h3 {
           margin-bottom: 5vh; } }
     .form .sign input {
       margin-top: 1.5vh;
       margin-bottom: 1.5vh; }
+
+footer {
+  height: 10vh; }
 
 /*# sourceMappingURL=style.css.map */

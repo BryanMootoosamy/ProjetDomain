@@ -16,24 +16,30 @@ header
         color: $headerTitle
         text-align: center
         width: 100%
+        @media screen and (max-width: 768px) and (orientation: landscape)
+            height: 20vh
         h1
             font-family: $roboto
             font-size: 4vh
             margin: auto
             padding-top: 2vh
+            @media screen and (max-width: 768px) and (orientation: landscape)
+                font-size: 10vh
         h3
             font-family: $roboto
             font-size: 1.5vh
             margin: auto
             font-style: italic
             padding-top: 1vh
+            @media screen and (max-width: 768px) and (orientation: landscape)
+                font-size: 4vh
     .bottom
         height: 3vh
         width: 100%
         background-color: $headerMenu
         padding-top: 2vh
         transform: translateY(-1vh)
-        @media screen and (max-width: 760px) and (orientation: portrait)
+        @media screen and (max-width: 768px) and (orientation: portrait)
             background: none
             float: left
             width: 45%
@@ -41,9 +47,11 @@ header
             background-color: rgba(30, 30, 31, 0.85)
             position: fixed
             transform: translateX(-100%)
+        @media screen and (max-width: 768px) and (orientation: landscape)
+            height: 8vh
         .burger
             display: none
-            @media screen and (max-width: 760px) and (orientation: portrait)
+            @media screen and (max-width: 768px) and (orientation: portrait)
                 display: block
                 background: none
                 border: none
@@ -51,21 +59,24 @@ header
                 float: right
                 font-size: 3.5vh
                 transform: translateX(11vw)
-    .show
-        transform: translateX(0%)
-        transition: ease-out
         ul
-            @media screen and (max-width: 760px) and (orientation: portrait)
+            @media screen and (max-width: 768px) and (orientation: portrait)
                 display: block
                 width: 60%
                 margin: 10vh 0 0 0
+            @media screen and (max-width: 768px) and (orientation: landscape)
+                transform: translateY(1vh)
+                justify-content: space-between
+            @media screen and (max-width: 480px) and (orientation: landscape)
+                width: 80%
+                transform: translateX(-10vw)
             display: flex
             width: 60%
             justify-content: space-between
             margin-left: 20vw
 
             li
-                @media screen and (max-width: 760px) and (orientation: portrait)
+                @media screen and (max-width: 768px) and (orientation: portrait)
                     margin-top: 10vh
                     line-height: 4vh
                     margin-left: 3.5vw
@@ -79,14 +90,20 @@ header
                     background-color: #6B696B
                     padding: 0.5vh
                     border-radius: 0.5vh
-                    @media screen and (max-width: 760px) and (orientation: portrait)
+                    @media screen and (max-width: 768px) and (orientation: landscape)
+                        padding: 1vh
+                        font-size: 4vh
+                    @media screen and (max-width: 768px) and (orientation: portrait)
                         background: none
                         font-size: 3.5vh
                         font-weight: bold
                     &:hover
-                        @media screen and (max-width: 760px) and (orientation: portrait)
+                        @media screen and (max-width: 768px) and (orientation: portrait)
                             background: none
                         background-color: #ADABAD
+    .show
+        transform: translateX(0%)
+        transition: ease-out
 .main
     margin-top: 15vh
     text-align: center
@@ -103,8 +120,11 @@ main
         margin: 5vh auto auto 44vw
         height: 20vh
         border-radius: 15vh
-        @media screen and (max-width: 760px) and (orientation: portrait)
+        @media screen and (max-width: 768px) and (orientation: portrait)
             transform: translateX(-35%)
+        @media screen and (max-width: 768px) and (orientation: landscape)
+            height: 35vh
+            transform: translateX(-3vw)
     h2
         margin: auto
         font-family: $roboto
@@ -114,7 +134,7 @@ main
         text-decoration: underline
     .content
         display: flex
-        @media screen and (max-width: 760px) and (orientation: portrait)
+        @media screen and (max-width: 768px) and (orientation: portrait)
             display: block
         .left
             margin: auto
@@ -122,40 +142,49 @@ main
             margin-top: 5vh
             width: 30vw
             font-family: $roboto
-            @media screen and (max-width: 760px) and (orientation: portrait)
+            @media screen and (max-width: 768px) and (orientation: portrait)
                 width: 80vw
             h3
                 font-size: 4vh
                 font-weight: bold
+                @media screen and (max-width: 768px) and (orientation: landscape)
+                    font-size: 8vh
             p
                 font-size: 1.5vh
                 font-style: italic
                 margin-top: 1.5vh
                 line-height: 3vh
-                @media screen and (max-width: 760px) and (orientation: portrait)
+                @media screen and (max-width: 768px) and (orientation: portrait)
                     font-size: 2vh
                     line-height: 4vh
                     text-align: justify
+                @media screen and (max-width: 768px) and (orientation: landscape)
+                    font-size: 3vh
         .right
             margin: auto
             padding: 2vh 2vw
             margin-top: 5vh
             width: 30vw
             font-family: $roboto
-            @media screen and (max-width: 760px) and (orientation: portrait)
+            @media screen and (max-width: 768px) and (orientation: portrait)
                 width: 80vw
             h3
                 font-size: 4vh
                 font-weight: bold
+                @media screen and (max-width: 768px) and (orientation: landscape)
+                    font-size: 8vh
             ul
                 li
                     font-size: 1.5vh
                     font-style: italic
                     margin-top: 1.5vh
                     line-height: 3vh
-                    @media screen and (max-width: 760px) and (orientation: portrait)
+                    @media screen and (max-width: 768px) and (orientation: portrait)
                         font-size: 2vh
                         line-height: 5vh
+                    @media screen and (max-width: 768px) and (orientation: landscape)
+                        font-size: 3vh
+                        line-height: 6vh
                     a
                         font-style: normal
                         border: 1px solid $headerBack
@@ -164,7 +193,7 @@ main
                         text-decoration: none
                         color: $headerTitle
                         border-radius: 1vh
-                        @media screen and (max-width: 760px) and (orientation: portrait)
+                        @media screen and (max-width: 768px)
                             background: none
                             border: none
                             color: $headerBack
@@ -172,19 +201,19 @@ main
                         &:hover
                             background-color: $headerTitle
                             color: $headerBack
-                            @media screen and (max-width: 760px) and (orientation: portrait)
+                            @media screen and (max-width: 768px) and (orientation: portrait)
                                 background: none
                                 color: $headerMenu
 .form
     display: flex
     width: 100vw
     font-family: $roboto
-    @media screen and (max-width: 760px) and (orientation: portrait)
+    @media screen and (max-width: 768px) and (orientation: portrait)
         display: block
     .log
         margin: 8vh auto auto 20vw
         width: 30%
-        @media screen and (max-width: 760px) and (orientation: portrait)
+        @media screen and (max-width: 768px) and (orientation: portrait)
             width: 70%
         h3
             font-size: 4vh
@@ -200,11 +229,11 @@ main
     .sign
         margin: 8vh auto auto 14vw
         width: 40%
-        @media screen and (max-width: 760px) and (orientation: portrait)
+        @media screen and (max-width: 768px) and (orientation: portrait)
             width: 70%
             margin-bottom: 2vh
         h3
-            @media screen and (max-width: 760px) and (orientation: portrait)
+            @media screen and (max-width: 768px) and (orientation: portrait)
                 margin-bottom: 5vh
             font-size: 4vh
             font-weight: bold
@@ -213,3 +242,5 @@ main
         input
             margin-top: 1.5vh
             margin-bottom: 1.5vh
+footer
+    height: 10vh
