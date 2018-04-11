@@ -30,15 +30,48 @@ header {
     background-color: #333331;
     padding-top: 2vh;
     transform: translateY(-1vh); }
-    header .bottom ul {
+    @media screen and (max-width: 760px) and (orientation: portrait) {
+      header .bottom {
+        background: none;
+        float: left;
+        width: 45%;
+        height: 100vh;
+        background-color: rgba(30, 30, 31, 0.85);
+        position: absolute;
+        transform: translateX(-100%); } }
+    header .bottom .burger {
+      display: none; }
+      @media screen and (max-width: 760px) and (orientation: portrait) {
+        header .bottom .burger {
+          display: block;
+          background: none;
+          border: none;
+          color: grey;
+          float: right;
+          font-size: 3.5vh;
+          transform: translateX(11vw); } }
+  header .show {
+    transform: translateX(0%);
+    transition: ease-out; }
+    header .show ul {
       display: flex;
       width: 60%;
       justify-content: space-between;
       margin-left: 20vw; }
-      header .bottom ul li {
+      @media screen and (max-width: 760px) and (orientation: portrait) {
+        header .show ul {
+          display: block;
+          width: 60%;
+          margin: 10vh 0 0 0; } }
+      header .show ul li {
         padding-left: 2vw;
         transform: translateY(-0.5vh); }
-        header .bottom ul li a {
+        @media screen and (max-width: 760px) and (orientation: portrait) {
+          header .show ul li {
+            margin-top: 10vh;
+            line-height: 4vh;
+            margin-left: 3.5vw; } }
+        header .show ul li a {
           text-decoration: none;
           font-family: "Roboto Mono";
           color: #E8E3D3;
@@ -46,8 +79,16 @@ header {
           background-color: #6B696B;
           padding: 0.5vh;
           border-radius: 0.5vh; }
-          header .bottom ul li a:hover {
+          @media screen and (max-width: 760px) and (orientation: portrait) {
+            header .show ul li a {
+              background: none;
+              font-size: 3.5vh;
+              font-weight: bold; } }
+          header .show ul li a:hover {
             background-color: #ADABAD; }
+            @media screen and (max-width: 760px) and (orientation: portrait) {
+              header .show ul li a:hover {
+                background: none; } }
 
 .main {
   margin-top: 15vh;

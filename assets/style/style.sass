@@ -33,12 +33,42 @@ header
         background-color: $headerMenu
         padding-top: 2vh
         transform: translateY(-1vh)
+        @media screen and (max-width: 760px) and (orientation: portrait)
+            background: none
+            float: left
+            width: 45%
+            height: 100vh
+            background-color: rgba(30, 30, 31, 0.85)
+            position: absolute
+            transform: translateX(-100%)
+        .burger
+            display: none
+            @media screen and (max-width: 760px) and (orientation: portrait)
+                display: block
+                background: none
+                border: none
+                color: grey
+                float: right
+                font-size: 3.5vh
+                transform: translateX(11vw)
+    .show
+        transform: translateX(0%)
+        transition: ease-out
         ul
+            @media screen and (max-width: 760px) and (orientation: portrait)
+                display: block
+                width: 60%
+                margin: 10vh 0 0 0
             display: flex
             width: 60%
             justify-content: space-between
             margin-left: 20vw
+
             li
+                @media screen and (max-width: 760px) and (orientation: portrait)
+                    margin-top: 10vh
+                    line-height: 4vh
+                    margin-left: 3.5vw
                 padding-left: 2vw
                 transform: translateY(-0.5vh)
                 a
@@ -49,7 +79,13 @@ header
                     background-color: #6B696B
                     padding: 0.5vh
                     border-radius: 0.5vh
+                    @media screen and (max-width: 760px) and (orientation: portrait)
+                        background: none
+                        font-size: 3.5vh
+                        font-weight: bold
                     &:hover
+                        @media screen and (max-width: 760px) and (orientation: portrait)
+                            background: none
                         background-color: #ADABAD
 .main
     margin-top: 15vh
