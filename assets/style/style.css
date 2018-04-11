@@ -1,0 +1,147 @@
+@import url(reset.css);
+@import url("https://fonts.googleapis.com/css?family=Roboto+Mono");
+body {
+  background-color: #FCF9FD; }
+
+header {
+  width: 100vw; }
+  header .top {
+    height: 11vh;
+    border-bottom: 1px solid #1E1E1F;
+    background-color: #1E1E1F;
+    overflow-x: hidden;
+    color: #E8E3D3;
+    text-align: center;
+    width: 100%; }
+    header .top h1 {
+      font-family: "Roboto Mono";
+      font-size: 4vh;
+      margin: auto;
+      padding-top: 2vh; }
+    header .top h3 {
+      font-family: "Roboto Mono";
+      font-size: 1.5vh;
+      margin: auto;
+      font-style: italic;
+      padding-top: 1vh; }
+  header .bottom {
+    height: 3vh;
+    width: 100%;
+    background-color: #333331;
+    padding-top: 2vh;
+    transform: translateY(-1vh); }
+    header .bottom ul {
+      display: flex;
+      width: 60%;
+      justify-content: space-between;
+      margin-left: 20vw; }
+      header .bottom ul li {
+        padding-left: 2vw;
+        transform: translateY(-0.5vh); }
+        header .bottom ul li a {
+          text-decoration: none;
+          font-family: "Roboto Mono";
+          color: #E8E3D3;
+          font-size: 2vh;
+          background-color: #6B696B;
+          padding: 0.5vh;
+          border-radius: 0.5vh; }
+          header .bottom ul li a:hover {
+            background-color: #ADABAD; }
+
+.main {
+  margin-top: 15vh;
+  text-align: center; }
+  .main h2 {
+    font-family: "Roboto Mono";
+    font-size: 7vh;
+    font-weight: bold; }
+  .main h4 {
+    font-family: "Roboto Mono";
+    font-size: 5vh; }
+
+main {
+  width: 100vw; }
+  main img {
+    margin: 5vh auto auto 44vw;
+    height: 20vh;
+    border-radius: 15vh; }
+  main h2 {
+    margin: auto;
+    font-family: "Roboto Mono";
+    font-size: 6vh;
+    text-align: center;
+    margin-top: 6vh;
+    text-decoration: underline; }
+  main .content {
+    display: flex; }
+    main .content .left {
+      margin: auto;
+      padding: 2vh 2vw;
+      margin-top: 5vh;
+      width: 30vw;
+      font-family: "Roboto Mono"; }
+      main .content .left h3 {
+        font-size: 4vh;
+        font-weight: bold; }
+      main .content .left p {
+        font-size: 1.5vh;
+        font-style: italic;
+        margin-top: 1.5vh;
+        line-height: 3vh; }
+    main .content .right {
+      margin: auto;
+      padding: 2vh 2vw;
+      margin-top: 5vh;
+      width: 30vw;
+      font-family: "Roboto Mono"; }
+      main .content .right h3 {
+        font-size: 4vh;
+        font-weight: bold; }
+      main .content .right ul li {
+        font-size: 1.5vh;
+        font-style: italic;
+        margin-top: 1.5vh;
+        line-height: 3vh; }
+        main .content .right ul li a {
+          font-style: normal;
+          border: 1px solid #1E1E1F;
+          background-color: #1E1E1F;
+          padding: 0.7vh 0.3vw;
+          text-decoration: none;
+          color: #E8E3D3;
+          border-radius: 1vh; }
+          main .content .right ul li a:hover {
+            background-color: #E8E3D3;
+            color: #1E1E1F; }
+
+.form {
+  display: flex;
+  width: 100vw;
+  font-family: "Roboto Mono"; }
+  .form .log {
+    margin: 8vh auto auto 20vw;
+    width: 30%; }
+    .form .log h3 {
+      font-size: 4vh;
+      font-weight: bold;
+      text-decoration: underline;
+      margin-bottom: 6vh; }
+    .form .log .advertise {
+      margin-bottom: 5vh; }
+    .form .log input {
+      margin-top: 1.5vh;
+      margin-bottom: 1.5vh; }
+  .form .sign {
+    margin: 8vh auto auto 14vw;
+    width: 40%; }
+    .form .sign h3 {
+      font-size: 4vh;
+      font-weight: bold;
+      text-decoration: underline;
+      margin-bottom: 20vh; }
+    .form .sign input {
+      margin-top: 1.5vh;
+      margin-bottom: 1.5vh; }
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,147 @@
+@import 'reset.css'
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono')
+$headerMenu: #333331
+$headerTitle: #E8E3D3
+$roboto: "Roboto Mono"
+$headerBack: #1E1E1F
+body
+    background-color: #FCF9FD
+header
+    width: 100vw
+    .top
+        height: 11vh
+        border-bottom: 1px solid $headerBack
+        background-color: $headerBack
+        overflow-x: hidden
+        color: $headerTitle
+        text-align: center
+        width: 100%
+        h1
+            font-family: $roboto
+            font-size: 4vh
+            margin: auto
+            padding-top: 2vh
+        h3
+            font-family: $roboto
+            font-size: 1.5vh
+            margin: auto
+            font-style: italic
+            padding-top: 1vh
+    .bottom
+        height: 3vh
+        width: 100%
+        background-color: $headerMenu
+        padding-top: 2vh
+        transform: translateY(-1vh)
+        ul
+            display: flex
+            width: 60%
+            justify-content: space-between
+            margin-left: 20vw
+            li
+                padding-left: 2vw
+                transform: translateY(-0.5vh)
+                a
+                    text-decoration: none
+                    font-family: $roboto
+                    color: $headerTitle
+                    font-size: 2vh
+                    background-color: #6B696B
+                    padding: 0.5vh
+                    border-radius: 0.5vh
+                    &:hover
+                        background-color: #ADABAD
+.main
+    margin-top: 15vh
+    text-align: center
+    h2
+        font-family: $roboto
+        font-size: 7vh
+        font-weight: bold
+    h4
+        font-family: $roboto
+        font-size: 5vh
+main
+    width: 100vw
+    img
+        margin: 5vh auto auto 44vw
+        height: 20vh
+        border-radius: 15vh
+    h2
+        margin: auto
+        font-family: $roboto
+        font-size: 6vh
+        text-align: center
+        margin-top: 6vh
+        text-decoration: underline
+    .content
+        display: flex
+        .left
+            margin: auto
+            padding: 2vh 2vw
+            margin-top: 5vh
+            width: 30vw
+            font-family: $roboto
+            h3
+                font-size: 4vh
+                font-weight: bold
+            p
+                font-size: 1.5vh
+                font-style: italic
+                margin-top: 1.5vh
+                line-height: 3vh
+        .right
+            margin: auto
+            padding: 2vh 2vw
+            margin-top: 5vh
+            width: 30vw
+            font-family: $roboto
+            h3
+                font-size: 4vh
+                font-weight: bold
+            ul
+                li
+                    font-size: 1.5vh
+                    font-style: italic
+                    margin-top: 1.5vh
+                    line-height: 3vh
+                    a
+                        font-style: normal
+                        border: 1px solid $headerBack
+                        background-color: $headerBack
+                        padding: 0.7vh 0.3vw
+                        text-decoration: none
+                        color: $headerTitle
+                        border-radius: 1vh
+                        &:hover
+                            background-color: $headerTitle
+                            color: $headerBack
+.form
+    display: flex
+    width: 100vw
+    font-family: $roboto
+    .log
+        margin: 8vh auto auto 20vw
+        width: 30%
+        h3
+            font-size: 4vh
+            font-weight: bold
+            text-decoration: underline
+            margin-bottom: 6vh
+        .advertise
+            margin-bottom: 5vh
+        input
+            margin-top: 1.5vh
+            margin-bottom: 1.5vh
+
+    .sign
+        margin: 8vh auto auto 14vw
+        width: 40%
+        h3
+            font-size: 4vh
+            font-weight: bold
+            text-decoration: underline
+            margin-bottom: 20vh
+        input
+            margin-top: 1.5vh
+            margin-bottom: 1.5vh
