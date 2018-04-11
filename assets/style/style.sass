@@ -39,7 +39,7 @@ header
             width: 45%
             height: 100vh
             background-color: rgba(30, 30, 31, 0.85)
-            position: absolute
+            position: fixed
             transform: translateX(-100%)
         .burger
             display: none
@@ -103,6 +103,8 @@ main
         margin: 5vh auto auto 44vw
         height: 20vh
         border-radius: 15vh
+        @media screen and (max-width: 760px) and (orientation: portrait)
+            transform: translateX(-35%)
     h2
         margin: auto
         font-family: $roboto
@@ -112,12 +114,16 @@ main
         text-decoration: underline
     .content
         display: flex
+        @media screen and (max-width: 760px) and (orientation: portrait)
+            display: block
         .left
             margin: auto
             padding: 2vh 2vw
             margin-top: 5vh
             width: 30vw
             font-family: $roboto
+            @media screen and (max-width: 760px) and (orientation: portrait)
+                width: 80vw
             h3
                 font-size: 4vh
                 font-weight: bold
@@ -126,12 +132,18 @@ main
                 font-style: italic
                 margin-top: 1.5vh
                 line-height: 3vh
+                @media screen and (max-width: 760px) and (orientation: portrait)
+                    font-size: 2vh
+                    line-height: 4vh
+                    text-align: justify
         .right
             margin: auto
             padding: 2vh 2vw
             margin-top: 5vh
             width: 30vw
             font-family: $roboto
+            @media screen and (max-width: 760px) and (orientation: portrait)
+                width: 80vw
             h3
                 font-size: 4vh
                 font-weight: bold
@@ -141,6 +153,9 @@ main
                     font-style: italic
                     margin-top: 1.5vh
                     line-height: 3vh
+                    @media screen and (max-width: 760px) and (orientation: portrait)
+                        font-size: 2vh
+                        line-height: 5vh
                     a
                         font-style: normal
                         border: 1px solid $headerBack
@@ -149,16 +164,28 @@ main
                         text-decoration: none
                         color: $headerTitle
                         border-radius: 1vh
+                        @media screen and (max-width: 760px) and (orientation: portrait)
+                            background: none
+                            border: none
+                            color: $headerBack
+                            text-decoration: underline
                         &:hover
                             background-color: $headerTitle
                             color: $headerBack
+                            @media screen and (max-width: 760px) and (orientation: portrait)
+                                background: none
+                                color: $headerMenu
 .form
     display: flex
     width: 100vw
     font-family: $roboto
+    @media screen and (max-width: 760px) and (orientation: portrait)
+        display: block
     .log
         margin: 8vh auto auto 20vw
         width: 30%
+        @media screen and (max-width: 760px) and (orientation: portrait)
+            width: 70%
         h3
             font-size: 4vh
             font-weight: bold
@@ -173,7 +200,12 @@ main
     .sign
         margin: 8vh auto auto 14vw
         width: 40%
+        @media screen and (max-width: 760px) and (orientation: portrait)
+            width: 70%
+            margin-bottom: 2vh
         h3
+            @media screen and (max-width: 760px) and (orientation: portrait)
+                margin-bottom: 5vh
             font-size: 4vh
             font-weight: bold
             text-decoration: underline
