@@ -1,5 +1,6 @@
 <?php
     session_start();
+    require model."logoff.php";
     require model."title.php";
     require view."head.php";
     require view."header.php";
@@ -12,7 +13,6 @@
             require model."db-connect.php";
             require model."log.php";
             require model."connect.php";
-            require model."logoff.php";
             if (isset($_POST['sign'])) {
                 $user = new UserSignUp($username, $email, $password, $confirm, $honeypot);
                 $user->signUp();
