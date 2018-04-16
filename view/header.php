@@ -4,12 +4,7 @@
             <h3>"Oh look ! A penny !"</h3>
         </section>
         <section id="bottom" class="bottom">
-            <div class="container" id="container">
-            	<!-- One div for each line -->
-            	<div class="line-1"></div>
-            	<div class="line-2"></div>
-            	<div class="line-3"></div>
-            </div>
+            <button type="button" class="burger" name="burger" id="burgerButton"><i class="fas fa-bars"></i></button>
             <script src="assets/js/burger.js" charset="utf-8"></script>
             <ul class="menu">
                 <li><a class="menuButton" href="index.php">Homepage</a></li>
