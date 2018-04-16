@@ -26,4 +26,3 @@
         require view."homepage.php";
     }
     require view."footer.php";
-?>

@@ -6,4 +6,3 @@
     define("style", "assets/style/");
     define("model", "model/");
     require controller."controller.php";
-?>

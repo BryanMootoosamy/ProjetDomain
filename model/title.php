@@ -10,4 +10,3 @@
     else {
         $currentPage = "Bryan's Domain";
     }
-?>

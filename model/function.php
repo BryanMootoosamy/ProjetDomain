@@ -10,8 +10,3 @@
             return $sanitized;
         }
     }
-
-
-
-
-?>
