@@ -3,7 +3,6 @@
     <head>
         <meta charset="utf-8">
         <link rel="stylesheet" href="assets/style/style.css">
-        <script src="assets/js/fontawesome-all.js" charset="utf-8"></script>
         <meta name="viewport" content="width=device-width">
         <?php
             if ($currentPage == "portfolio") {
