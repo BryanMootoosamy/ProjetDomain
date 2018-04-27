@@ -7,7 +7,7 @@
             <div class="navMenu" id="navMenu">
                 <ul class="menu">
                     <li><a class="menuButton" href="index.php">Homepage</a></li>
-                    <li><a class="menuButton" href="index.php?action=espaceperso">Espace Personnel</a></li>
+                    <li id="flux"><a class="menuButton" href="index.php?action=espaceperso">Espace Personnel</a></li>
                     <li><a class="menuButton" href="index.php?action=portfolio">Portfolio</a></li>
                 </ul>
             </div>
