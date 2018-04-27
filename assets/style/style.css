@@ -1,9 +1,49 @@
 @import url(reset.css);
 @import url("https://fonts.googleapis.com/css?family=Roboto+Mono");
 @import url("https://fonts.googleapis.com/css?family=Gugi");
-body {
-  background-color: #FCF9FD; }
-
+@keyframes blurFadeInOut {
+  0% {
+    opacity: 0;
+    text-shadow: 0 0 40px #fff;
+    transform: scale(1.3); }
+  20%, 75% {
+    opacity: 1;
+    text-shadow: 0 0 1px #fff;
+    transform: scale(1); }
+  100% {
+    opacity: 0;
+    text-shadow: 0 0 50px #fff;
+    transform: scale(0); } }
+@keyframes blurFadeIn {
+  0% {
+    opacity: 0;
+    text-shadow: 0 0 40px #fff;
+    transform: scale(1.3); }
+  50% {
+    opacity: 0.5;
+    text-shadow: 0 0 10px #fff;
+    transform: scale(1.1); }
+  100% {
+    opacity: 1;
+    text-shadow: 0 0 1px #fff;
+    trasform: scale(1); } }
+@keyframes fadeInBack {
+  0% {
+    opacity: 0;
+    transform: scale(0); }
+  50% {
+    opacity: 0.4;
+    transform: scale(2); }
+  100% {
+    opacity: 0.2;
+    transform: scale(5); } }
+@keyframes fadeInRotate {
+  0% {
+    opacity: 0;
+    transform: scale(0) rotate(360deg); }
+  100% {
+    opacity: 1;
+    transform: scale(1) rotate(0deg); } }
 header {
   border-bottom: 2px solid #333331;
   position: fixed;
@@ -15,7 +55,8 @@ header {
       background-image: url("../pics/background.jpg");
       color: #E8E3D3; } }
   header .navbar {
-    display: flex; }
+    display: flex;
+    z-index: 10000; }
     @media screen and (max-width: 768px) and (orientation: portrait) {
       header .navbar {
         height: 10vh; } }
@@ -57,10 +98,12 @@ header {
         height: 90vh;
         display: block;
         position: absolute;
-        transform: translateX(-50vw); } }
+        transform: translateX(-50vw);
+        z-index: 10000; } }
     @media screen and (max-width: 768px) and (orientation: landscape) {
       header .navbar .navMenu {
-        transform: translateX(-50vw); } }
+        transform: translateX(-50vw);
+        z-index: 10000; } }
     header .navbar .navMenu .menu {
       display: flex;
       margin-top: 6vh;
@@ -321,7 +364,8 @@ footer {
       background-color: #49515C;
       position: fixed;
       top: 12vh;
-      left: 3vw; } }
+      left: 3vw;
+      z-index: 10000; } }
   @media screen and (max-width: 768px) and (orientation: portrait) {
     #burgerButton #lign1 {
       background-color: #E5CFCF;
@@ -362,5 +406,81 @@ footer {
 @media screen and (max-width: 768px) and (orientation: portrait) {
   .buttonMove {
     transform: translateX(50vw); } }
+
+.sp-container {
+  margin-top: 13.5vh;
+  position: fixed;
+  width: 100vw;
+  height: 86.5vh;
+  z-index: 0;
+  background-image: linear-gradient(180deg, black 0%, transparent 100%), url("../pics/background.jpg");
+  background-size: cover; }
+  .sp-container .sp-content {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: 0; }
+    .sp-container .sp-content h2 {
+      position: absolute;
+      top: 25%;
+      line-height: 18vh;
+      height: 4vh;
+      margin-top: -3vh;
+      font-size: 9em;
+      width: 100%;
+      text-align: center;
+      color: transparent;
+      animation: blurFadeInOut 3s ease-in backwards; }
+    .sp-container .sp-content .frame-1 {
+      animation-delay: 0s; }
+    .sp-container .sp-content .frame-2 {
+      animation-delay: 3s; }
+    .sp-container .sp-content .frame-3 {
+      animation-delay: 6s; }
+    .sp-container .sp-content .frame-4 {
+      animation-delay: 9s; }
+    .sp-container .sp-content .frame-5 {
+      animation: none;
+      text-shadow: 0 0 1px #fff; }
+    .sp-container .sp-content .frame-5 span {
+      animation: blurFadeIn 3s ease-in 12s backwards;
+      color: transparent;
+      text-shadow: 0 0 1px #fff; }
+      .sp-container .sp-content .frame-5 span:nth-child(2) {
+        animation-delay: 13s; }
+      .sp-container .sp-content .frame-5 span:nth-child(3) {
+        animation-delay: 14s; }
+    .sp-container .sp-content .sp-globe {
+      position: absolute;
+      width: 282px;
+      height: 273px;
+      left: 50%;
+      top: 50%;
+      margin: -173px 0 0 -141px;
+      animation: fadeInBack 3.6s linear 14s backwards;
+      filter: alpha(opacity=30);
+      opacity: 0.3;
+      transform: scale(5); }
+    .sp-container .sp-content .sp-circle-link {
+      position: absolute;
+      left: 50%;
+      top: 60vh;
+      bottom: 100px;
+      margin-left: -50px;
+      text-align: center;
+      line-height: 10vh;
+      width: 100px;
+      height: 100px;
+      background: #fff;
+      color: #3f1616;
+      font-size: 2em;
+      border-radius: 50%;
+      animation: fadeInRotate 1s linear 16s backwards;
+      transform: scale(1) rotate(0deg); }
+      .sp-container .sp-content .sp-circle-link:hover {
+        background: #85373b;
+        color: #fff; }
 
 /*# sourceMappingURL=style.css.map */

@@ -8,8 +8,51 @@ $headerBack: #1E1E1F
 $menufont: "Gugi"
 $fontColor: #83D6CC
 $folioButton: #A89B95
+@keyframes blurFadeInOut
+    0%
+        opacity: 0
+        text-shadow: 0 0 40px #fff 
+        transform: scale(1.3)
+    20%, 75%
+        opacity: 1
+        text-shadow: 0 0 1px #fff 
+        transform: scale(1)
+    100%
+        opacity: 0
+        text-shadow: 0 0 50px #fff 
+        transform: scale(0)
+@keyframes blurFadeIn 
+    0%
+        opacity: 0
+        text-shadow: 0 0 40px #fff 
+        transform: scale(1.3)
+    50%
+        opacity: 0.5
+        text-shadow: 0 0 10px #fff 
+        transform: scale(1.1)
+    100%
+        opacity: 1
+        text-shadow: 0 0 1px #fff 
+        trasform: scale(1)
+@keyframes fadeInBack
+    0%
+        opacity: 0
+        transform: scale(0)
+    50%
+        opacity: 0.4
+        transform: scale(2)
+    100%
+        opacity: 0.2
+        transform: scale(5)
+@keyframes fadeInRotate 
+    0%
+        opacity: 0
+        transform: scale(0) rotate(360deg)
+    100%
+        opacity: 1
+        transform: scale(1) rotate(0deg)
 body
-    background-color: #FCF9FD
+    
 header
     border-bottom: 2px solid $headerMenu
     position: fixed
@@ -21,6 +64,7 @@ header
         color: $headerTitle
     .navbar
         display: flex
+        z-index: 10000
         @media screen and (max-width: 768px) and (orientation: portrait)
             height: 10vh
         .title
@@ -59,8 +103,10 @@ header
                 display: block
                 position: absolute
                 transform: translateX(-50vw)
+                z-index: 10000
             @media screen and (max-width: 768px) and (orientation: landscape)
                 transform: translateX(-50vw)
+                z-index: 10000
             .menu
                 display: flex
                 margin-top: 6vh
@@ -296,6 +342,7 @@ footer
         position: fixed 
         top: 12vh
         left: 3vw
+        z-index: 10000
     #lign1
         @media screen and (max-width: 768px) and (orientation: portrait)
             background-color: #E5CFCF
@@ -334,3 +381,83 @@ footer
 .buttonMove
     @media screen and (max-width: 768px) and (orientation: portrait)
         transform: translateX(50vw)
+.sp-container
+    margin-top: 13.5vh
+    position: fixed
+    width: 100vw
+    height: 86.5vh
+    z-index: 0
+    background-image: linear-gradient(180deg, black 0%, transparent 100%), url("../pics/background.jpg")
+    background-size: cover
+    .sp-content
+        position: absolute
+        width: 100%
+        height: 100%
+        left: 0
+        top: 0
+        z-index: 0
+        h2 
+            position: absolute
+            top: 25%
+            line-height: 18vh
+            height: 4vh
+            margin-top: -3vh
+            font-size: 9em
+            width: 100%
+            text-align: center
+            color: transparent
+            animation: blurFadeInOut 3s ease-in backwards
+        .frame-1 
+            animation-delay: 0s
+        .frame-2
+            animation-delay: 3s
+        .frame-3
+            animation-delay: 6s
+        .frame-4
+            animation-delay: 9s
+        .frame-5
+            animation: none
+            text-shadow: 0 0 1px #fff 
+        .frame-5 
+            span 
+                animation: blurFadeIn 3s ease-in 12s backwards
+                color: transparent 
+                text-shadow: 0 0 1px #fff 
+                &:nth-child(2)
+                    animation-delay: 13s
+                &:nth-child(3)
+                    animation-delay: 14s
+        .sp-globe
+            position: absolute 
+            width: 282px
+            height: 273px
+            left: 50%
+            top: 50%
+            margin: -173px 0 0 -141px
+            animation: fadeInBack 3.6s linear 14s backwards
+            filter: alpha(opacity=30)
+            opacity: 0.3
+            transform: scale(5)
+        .sp-circle-link
+            position: absolute
+            left: 50%
+            top: 60vh
+            bottom: 100px
+            margin-left: -50px
+            text-align: center 
+            line-height: 10vh
+            width: 100px
+            height: 100px
+            background: #fff 
+            color: #3f1616
+            font-size: 2em
+            border-radius: 50%
+            animation: fadeInRotate 1s linear 16s backwards
+            transform: scale(1) rotate(0deg)
+            &:hover
+                background: #85373b
+                color: #fff
+
+
+
+        
