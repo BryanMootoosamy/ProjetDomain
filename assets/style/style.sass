@@ -1,130 +1,119 @@
 @import 'reset.css'
 @import url('https://fonts.googleapis.com/css?family=Roboto+Mono')
+@import url('https://fonts.googleapis.com/css?family=Gugi')
 $headerMenu: #333331
 $headerTitle: #E8E3D3
 $roboto: "Roboto Mono"
 $headerBack: #1E1E1F
+$menufont: "Gugi"
+$fontColor: #83D6CC
+$folioButton: #A89B95
 body
     background-color: #FCF9FD
 header
+    border-bottom: 2px solid $headerMenu
+    position: fixed
+    top: 0
     width: 100vw
-    .top
-        height: 11vh
-        border-bottom: 1px solid $headerBack
-        background-color: $headerBack
-        overflow-x: hidden
+    background-color: #FCF9FD
+    @media screen and (max-width: 768px) and (orientation: portrait)
+        background-image: url("../pics/background.jpg")
         color: $headerTitle
-        text-align: center
-        width: 100%
-        @media screen and (max-width: 768px) and (orientation: landscape)
-            height: 20vh
-        h1
-            font-family: $roboto
-            font-size: 4vh
-            margin: auto
-            padding-top: 2vh
-            @media screen and (max-width: 768px) and (orientation: landscape)
-                font-size: 10vh
-        h3
-            font-family: $roboto
-            font-size: 1.5vh
-            margin: auto
-            font-style: italic
-            padding-top: 1vh
-            @media screen and (max-width: 768px) and (orientation: landscape)
-                font-size: 4vh
-    .bottom
-        height: 3vh
-        width: 100%
-        background-color: $headerMenu
-        padding-top: 2vh
-        transform: translateY(-1vh)
+    .navbar
+        display: flex
         @media screen and (max-width: 768px) and (orientation: portrait)
-            background: none
-            float: left
-            width: 45%
-            height: 100vh
-            background-color: rgba(30, 30, 31, 0.85)
-            position: fixed
-            transform: translateX(-100%)
-        @media screen and (max-width: 768px) and (orientation: landscape)
-            height: 8vh
-        .burger
-            display: none
-            @media screen and (max-width: 768px) and (orientation: portrait)
-                display: block
-                background: none
-                border: none
-                color: grey
-                float: right
-                font-size: 3.5vh
-                transform: translateX(11vw)
-        ul
-            @media screen and (max-width: 768px) and (orientation: portrait)
-                display: block
-                width: 60%
-                margin: 10vh 0 0 0
-            @media screen and (max-width: 768px) and (orientation: landscape)
-                transform: translateY(1vh)
-                justify-content: space-between
-            @media screen and (max-width: 480px) and (orientation: landscape)
-                width: 80%
-                transform: translateX(-10vw)
-            display: flex
-            width: 60%
-            justify-content: space-between
-            margin-left: 20vw
-
-            li
+            height: 10vh
+        .title
+            h1 
+                font-family: $roboto
+                font-size: 3em
+                padding: 2vh
                 @media screen and (max-width: 768px) and (orientation: portrait)
-                    margin-top: 10vh
-                    line-height: 4vh
-                    margin-left: 3.5vw
-                padding-left: 2vw
-                transform: translateY(-0.5vh)
-                a
-                    text-decoration: none
-                    font-family: $roboto
-                    color: $headerTitle
-                    font-size: 2vh
-                    background-color: #6B696B
-                    padding: 0.5vh
-                    border-radius: 0.5vh
-                    @media screen and (max-width: 768px) and (orientation: landscape)
-                        padding: 1vh
-                        font-size: 4vh
+                    font-size: 2em
+                    padding: 2vh
+                    width: 100vw
+                    height: 10vh
+                    transform: translateX(10vw)
+            h5 
+                font-size: 1em
+                font-family: $roboto
+                font-style: italic
+                padding-left: 2vh
+                margin-bottom: 3vh
+                @media screen and (max-width: 768px) and (orientation: portrait)
+                    display: none
+        .navMenu
+            @media screen and (max-width: 768px) and (orientation: portrait)
+                top: 10vh
+                background-color: white
+                width: 50vw
+                height: 90vh
+                display: block
+                position: absolute
+                transform: translateX(-50vw)
+        .show
+            @media screen and (max-width: 768px) and (orientation: portrait)
+                transform: translateX(0vw)
+            .menu
+                display: flex
+                margin-top: 6vh
+                margin-left: 40vw
+                @media screen and (max-width: 768px) and (orientation: portrait)
+                    display: block
+                    margin-left: 4vw
+                li 
                     @media screen and (max-width: 768px) and (orientation: portrait)
-                        background: none
-                        font-size: 3.5vh
-                        font-weight: bold
-                    &:hover
-                        @media screen and (max-width: 768px) and (orientation: portrait)
-                            background: none
-                        background-color: #ADABAD
-    .show
-        transform: translateX(0%)
-        transition: ease-out
+                        margin-top: 15vh
+                    a 
+                        text-align: center
+                        text-decoration: none
+                        color: black
+                        font-family: $menufont
+                        font-size: 1.8em
+                        padding: 2vh
+                        
 .main
-    margin-top: 15vh
-    text-align: center
-    h2
-        font-family: $roboto
-        font-size: 7vh
-        font-weight: bold
-    h4
-        font-family: $roboto
-        font-size: 5vh
-main
+    height: 90vh
     width: 100vw
-    img
-        margin: 5vh auto auto 44vw
-        height: 20vh
-        border-radius: 15vh
+    margin-top: 10vh
+    background-image: linear-gradient(180deg, black 0%, transparent 100%), url("../pics/background.jpg")
+    background-size: cover
+    background-repeat: no-repeat
+    overflow: hidden
+    color: $fontColor
+    @media screen and (max-width: 768px) and (orientation: portrait)
+        overflow: scroll
+    h2 
+        margin-top: 30vh
+        margin-left: 25vw
+        font-family: $roboto
+        font-weight: bold 
+        font-size: 5em
         @media screen and (max-width: 768px) and (orientation: portrait)
-            transform: translateX(-35%)
-        @media screen and (max-width: 768px) and (orientation: landscape)
-            height: 35vh
-            transform: translateX(-3vw)
+            font-size: 2em
+            margin-left: 12vw
+    h4 
+        font-family: $roboto
+        font-weight: bold 
+        font-size: 2em
+        margin-left: 30vw
+        @media screen and (max-width: 768px) and (orientation: portrait)
+            font-size: 1em
+            margin-left: 12vw
+            margin-top: 10vh
+main
+    margin-top: 13vh
+    width: 100vw
+    height: 87vh
+    background-image: linear-gradient(180deg, black 0%, transparent 100%), url("../pics/background.jpg")
+    background-size: cover
+    background-repeat: no-repeat
+    overflow: hidden
+    color: $fontColor
+    @media screen and (max-width: 768px) and (orientation: portrait)
+        margin-top: 10vh
+        height: 90vh
+        overflow: scroll
     h2
         margin: auto
         font-family: $roboto
@@ -137,6 +126,7 @@ main
         @media screen and (max-width: 768px) and (orientation: portrait)
             display: block
         .left
+            background-color: rgba(0,0,0,0.65)
             margin: auto
             padding: 2vh 2vw
             margin-top: 5vh
@@ -161,6 +151,7 @@ main
                 @media screen and (max-width: 768px) and (orientation: landscape)
                     font-size: 3vh
         .right
+            background-color: rgba(0,0,0,0.65)
             margin: auto
             padding: 2vh 2vw
             margin-top: 5vh
@@ -188,7 +179,7 @@ main
                     a
                         font-style: normal
                         border: 1px solid $headerBack
-                        background-color: $headerBack
+                        background-color: $folioButton
                         padding: 0.7vh 0.3vw
                         text-decoration: none
                         color: $headerTitle
@@ -196,22 +187,32 @@ main
                         @media screen and (max-width: 768px)
                             background: none
                             border: none
-                            color: $headerBack
+                            color: $headerTitle
                             text-decoration: underline
                         &:hover
                             background-color: $headerTitle
                             color: $headerBack
                             @media screen and (max-width: 768px) and (orientation: portrait)
                                 background: none
-                                color: $headerMenu
+                                color: $folioButton
 .form
-    display: flex
+    margin-top: 13vh
     width: 100vw
+    height: 87vh
+    background-image: linear-gradient(180deg, black 0%, transparent 100%), url("../pics/background.jpg")
+    background-size: cover
+    background-repeat: no-repeat
+    overflow: hidden
+    color: $fontColor
+    display: flex
     font-family: $roboto
     @media screen and (max-width: 768px) and (orientation: portrait)
+        margin-top: 10vh
+        height: 90vh
+        overflow: scroll
         display: block
     .log
-        margin: 8vh auto auto 20vw
+        margin: 15vh auto auto 20vw
         width: 30%
         @media screen and (max-width: 768px) and (orientation: portrait)
             width: 70%
@@ -227,7 +228,7 @@ main
             margin-bottom: 1.5vh
 
     .sign
-        margin: 8vh auto auto 14vw
+        margin: 15vh auto auto 14vw
         width: 40%
         @media screen and (max-width: 768px) and (orientation: portrait)
             width: 70%
@@ -244,3 +245,54 @@ main
             margin-bottom: 1.5vh
 footer
     height: 10vh
+    position: fixed
+    top: 90vh
+#burgerButton 
+    display: none
+    @media screen and (max-width: 768px) and (orientation: portrait)
+        display: block
+        width: 16vw
+        height: 9vh
+        border-radius: 50%
+        background-color: #49515C
+        position: fixed 
+        top: 12vh
+        left: 3vw
+    #lign1
+        @media screen and (max-width: 768px) and (orientation: portrait)
+            background-color: #E5CFCF
+            height: 0.7vh
+            width: 8vw
+            margin-top: 3vh
+            margin-left: 4vw
+    #lign2 
+        @media screen and (max-width: 768px) and (orientation: portrait)
+            background-color: #E5CFCF
+            height: 0.7vh
+            width: 8vw
+            margin-top: 0.5vh
+            margin-left: 4vw
+    #lign3 
+        @media screen and (max-width: 768px) and (orientation: portrait)
+            background-color: #E5CFCF
+            height: 0.7vh
+            width: 8vw
+            margin-top: 0.5vh
+            margin-left: 4vw
+#imageHead 
+    background-image: url("../pics/face.jpg")
+    height: 20vh
+    width: 10vw
+    background-repeat: no-repeat
+    background-size: cover
+    overflow: hidden
+    border-radius: 50%
+    margin-left: 45vw
+    margin-top: 5vh
+    @media screen and (max-width: 768px) and (orientation: portrait)
+        width: 20vh
+        margin-left: 35vw
+
+.buttonMove
+    @media screen and (max-width: 768px) and (orientation: portrait)
+        transform: translateX(50vw)
