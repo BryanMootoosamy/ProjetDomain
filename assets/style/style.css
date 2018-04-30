@@ -45,6 +45,7 @@
     opacity: 1;
     transform: scale(1) rotate(0deg); } }
 header {
+  z-index: 0;
   border-bottom: 2px solid #333331;
   position: fixed;
   top: 0;
@@ -52,14 +53,14 @@ header {
   background-color: #FCF9FD; }
   @media screen and (max-width: 768px) and (orientation: portrait) {
     header {
-      background-image: url("../pics/background.jpg");
+      background-image: url("../pics/backgroundmin.png");
       color: #E8E3D3; } }
   header .navbar {
     display: flex;
     z-index: 10000; }
     @media screen and (max-width: 768px) and (orientation: portrait) {
       header .navbar {
-        height: 10vh; } }
+        height: 15vh; } }
     header .navbar .title h1 {
       font-family: "Roboto Mono";
       font-size: 3em;
@@ -90,36 +91,47 @@ header {
         header .navbar .title h5 {
           font-size: 1em;
           margin-top: 1vh; } }
+
+.navMenu {
+  z-index: 15000;
+  position: absolute;
+  top: 1vh;
+  left: 20vw;
+  width: 30vw; }
+  @media screen and (max-width: 768px) and (orientation: portrait) {
+    .navMenu {
+      top: 10vh;
+      background-color: white;
+      width: 50vw;
+      height: 90vh;
+      display: block;
+      position: absolute;
+      transform: translateX(-70vw);
+      z-index: 10000; } }
+  @media screen and (max-width: 768px) and (orientation: landscape) {
+    .navMenu {
+      transform: translateX(35vw);
+      margin-top: -2vh;
+      font-size: 0.8em;
+      z-index: 10000; } }
+  .navMenu .menu {
+    display: flex;
+    margin-top: 6vh;
+    margin-left: 40vw; }
     @media screen and (max-width: 768px) and (orientation: portrait) {
-      header .navbar .navMenu {
-        top: 10vh;
-        background-color: white;
-        width: 50vw;
-        height: 90vh;
+      .navMenu .menu {
         display: block;
-        position: absolute;
-        transform: translateX(-50vw);
-        z-index: 10000; } }
+        margin-left: 4vw; } }
     @media screen and (max-width: 768px) and (orientation: landscape) {
-      header .navbar .navMenu {
-        transform: translateX(-50vw);
-        z-index: 10000; } }
-    header .navbar .navMenu .menu {
-      display: flex;
-      margin-top: 6vh;
-      margin-left: 40vw; }
+      .navMenu .menu {
+        margin-left: 0vw;
+        transform: translateX(-10vw); } }
+    .navMenu .menu li {
+      margin-left: 2vw; }
       @media screen and (max-width: 768px) and (orientation: portrait) {
-        header .navbar .navMenu .menu {
-          display: block;
-          margin-left: 4vw; } }
-      @media screen and (max-width: 768px) and (orientation: landscape) {
-        header .navbar .navMenu .menu {
-          margin-left: 0vw;
-          transform: translateX(-10vw); } }
-      @media screen and (max-width: 768px) and (orientation: portrait) {
-        header .navbar .navMenu .menu li {
+        .navMenu .menu li {
           margin-top: 15vh; } }
-      header .navbar .navMenu .menu li a {
+      .navMenu .menu li a {
         text-align: center;
         text-decoration: none;
         color: black;
@@ -127,21 +139,25 @@ header {
         font-size: 1.8em;
         padding: 2vh; }
         @media screen and (max-width: 768px) and (orientation: landscape) {
-          header .navbar .navMenu .menu li a {
+          .navMenu .menu li a {
             font-size: 1.3em; } }
+    .navMenu .menu #flux {
+      transform: translateY(-2vh); }
       @media screen and (max-width: 768px) and (orientation: landscape) {
-        header .navbar .navMenu .menu #flux {
+        .navMenu .menu #flux {
           margin-top: 0vh;
           transform: translateY(-2vh); } }
-    @media screen and (max-width: 768px) and (orientation: portrait) {
-      header .navbar .show {
-        transform: translateX(0vw); } }
+
+@media screen and (max-width: 768px) and (orientation: portrait) {
+  .show {
+    transform: translateX(-20vw); } }
 
 .main {
+  z-index: 0;
   height: 90vh;
   width: 100vw;
   margin-top: 10vh;
-  background-image: linear-gradient(180deg, black 0%, transparent 100%), url("../pics/background.jpg");
+  background-image: linear-gradient(180deg, black 0%, transparent 100%), url("../pics/backgroundmin.png");
   background-size: cover;
   background-repeat: no-repeat;
   overflow: hidden;
@@ -179,10 +195,11 @@ header {
         width: 60vw; } }
 
 main {
+  z-index: 0;
   margin-top: 13vh;
   width: 100vw;
   height: 87vh;
-  background-image: linear-gradient(180deg, black 0%, transparent 100%), url("../pics/background.jpg");
+  background-image: linear-gradient(180deg, black 0%, transparent 100%), url("../pics/backgroundmin.png");
   background-size: cover;
   background-repeat: no-repeat;
   overflow: hidden;
@@ -291,7 +308,7 @@ main {
   margin-top: 13vh;
   width: 100vw;
   height: 87vh;
-  background-image: linear-gradient(180deg, black 0%, transparent 100%), url("../pics/background.jpg");
+  background-image: linear-gradient(180deg, black 0%, transparent 100%), url("../pics/backgroundmin.png");
   background-size: cover;
   background-repeat: no-repeat;
   overflow: hidden;
@@ -413,7 +430,7 @@ footer {
   width: 100vw;
   height: 86.5vh;
   z-index: 0;
-  background-image: linear-gradient(180deg, black 0%, transparent 100%), url("../pics/background.jpg");
+  background-image: linear-gradient(180deg, black 0%, transparent 100%), url("../pics/backgroundmin.png");
   background-size: cover; }
   .sp-container .sp-content {
     position: absolute;
@@ -433,6 +450,12 @@ footer {
       text-align: center;
       color: transparent;
       animation: blurFadeInOut 3s ease-in backwards; }
+      @media screen and (max-width: 768px) and (orientation: portrait) {
+        .sp-container .sp-content h2 {
+          font-size: 3em; } }
+      @media screen and (max-width: 768px) and (orientation: landscape) {
+        .sp-container .sp-content h2 {
+          font-size: 3em; } }
     .sp-container .sp-content .frame-1 {
       animation-delay: 0s; }
     .sp-container .sp-content .frame-2 {
@@ -479,6 +502,14 @@ footer {
       border-radius: 50%;
       animation: fadeInRotate 1s linear 16s backwards;
       transform: scale(1) rotate(0deg); }
+      @media screen and (max-width: 768px) and (orientation: portrait) {
+        .sp-container .sp-content .sp-circle-link {
+          width: 20vw;
+          height: 11.5vh;
+          margin-top: 10vh; } }
+      @media screen and (max-width: 768px) and (orientation: landscape) {
+        .sp-container .sp-content .sp-circle-link {
+          line-height: 22vh; } }
       .sp-container .sp-content .sp-circle-link:hover {
         background: #85373b;
         color: #fff; }
