@@ -7,7 +7,7 @@
         <section class="content">
             <section class="left">
                 <h3>Petite Bio</h3>
-                <p>Ancien étudiant en Droit à l'Université de Mons, j'ai changé d'orientation afin de me focaliser sur mes passion:
+                <p>Ancien étudiant en Droit à l'Université de Mons, j'ai changé d'orientation afin de me focaliser sur mes passions:
                 l'informatique et le développement. J'ai donc intégré la formation BeCode (plus particulièrement la première promotion du centre de formation de
                 Charleroi situé au Quai 10). Mon objectif est d'être Full Stack / polyvalent afin de pouvoir répondre à n'importe quel besoin.</p>
             </section>
