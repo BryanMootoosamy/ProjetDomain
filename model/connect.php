@@ -1,4 +1,7 @@
 <?php
+// besoin de redescendre la sanitization dans la classe pour rendre cette dernière valable. Il faut donc
+// modifier la fonction attribution en sortant le post de la fonction afin de le passer dans la fonctino construct
+//  à l'instanciation de la classe
     $emailLogRaw = attribution('emailLog');
     $passwordLogRaw = attribution('passwordLog');
     $emailLog = sanitize($emailLogRaw, FILTER_SANITIZE_EMAIL);
